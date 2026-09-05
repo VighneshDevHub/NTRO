@@ -1,0 +1,21 @@
+fastapi>=0.115
+uvicorn[standard]>=0.32
+sqlalchemy>=2.0
+aiosqlite>=0.20
+asyncpg>=0.30
+alembic>=1.13
+pydantic[email]>=2.9
+pydantic-settings>=2.6
+cryptography>=43.0
+python-jose[cryptography]>=3.3
+passlib[bcrypt]>=1.7
+# NOTE: passlib's bcrypt backend has a known incompatibility with
+# bcrypt>=4.1 (a self-test inside passlib itself raises ValueError on
+# newer bcrypt's stricter 72-byte password handling). Pin bcrypt below
+# that until passlib ships a fix.
+bcrypt==4.0.1
+pytest>=8.3
+pytest-asyncio>=0.24
+httpx>=0.27
+qrcode[pil]>=8.0
+reportlab>=4.2
